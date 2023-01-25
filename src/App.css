@@ -28,6 +28,15 @@
   color: #61dafb;
 }
 
+.docs-main{
+  text-align: center;
+}
+
+.new-doc-button{
+  height: 40px;
+  background-color: #13d146
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
