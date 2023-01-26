@@ -30,6 +30,9 @@ export default function Modal() {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
+                    <Typography>
+                        
+                    </Typography>
                     
                 </Box>
 
