@@ -16,9 +16,10 @@ const style = {
     p: 4,
 };
 
-export default function Modal() {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+export default function ModalComponent({
+    open,
+    setOpen,
+}) {
     const handleClose = () => setOpen(false);
 
     return (
