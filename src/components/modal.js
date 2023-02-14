@@ -36,11 +36,11 @@ export default function ModalComponent({
                         className="add-input"
                     />
                     <div class="title-button-container">
-                        <Button
+                        <button
                             className="new-doc-button"
                         >
-                            OK
-                        </Button>
+                            Add
+                        </button>
                     </div>
                     
                 </Box>
