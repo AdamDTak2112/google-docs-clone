@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "./modal";
 
-export default function Docs(){
-    const [open, setOpen] = React.useState(false);
+export default function Docs({database}){
+    const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     return (
         <div class="docs-main">
