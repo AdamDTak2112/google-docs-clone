@@ -4,6 +4,7 @@ import Modal from "./modal";
 export default function Docs({database}){
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
+    const [title, setTitle] = useState('');
     return (
         <div class="docs-main">
             <h1>Docs Clone</h1>
