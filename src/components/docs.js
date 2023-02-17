@@ -6,9 +6,17 @@ export default function Docs({database}){
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const [title, setTitle] = useState('');
-
+    const collectionRef = collection(database, 'docsData');
     const addData = () => {
-        console.log("success");
+        addDoc(collectionRef, {
+            title: title,
+        })
+        .then(() => {
+            alert("Data added");
+        })
+        .catch(() => {
+            alert("Cannot add data");
+        })
     };
     return (
         <div className="docs-main">
