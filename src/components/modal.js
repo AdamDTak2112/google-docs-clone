@@ -21,6 +21,7 @@ export default function ModalComponent({
     setOpen,
     title,
     setTitle,
+    addData,
 }) {
     const handleClose = () => setOpen(false);
 
@@ -39,9 +40,10 @@ export default function ModalComponent({
                         onChange={(event) => setTitle(event.target.value)}
                         value={title}
                     />
-                    <div class="title-button-container">
+                    <div className="title-button-container">
                         <button
                             className="new-doc-button"
+                            onClick={addData}
                         >
                             Add
                         </button>
