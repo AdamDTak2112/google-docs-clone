@@ -19,6 +19,8 @@ const style = {
 export default function ModalComponent({
     open,
     setOpen,
+    title,
+    setTitle,
 }) {
     const handleClose = () => setOpen(false);
 
@@ -34,6 +36,8 @@ export default function ModalComponent({
                     <input 
                         placeholder="Add a Title"
                         className="add-input"
+                        onChange={(event) => setTitle(event.target.value)}
+                        value={title}
                     />
                     <div class="title-button-container">
                         <button

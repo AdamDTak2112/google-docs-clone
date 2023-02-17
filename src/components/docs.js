@@ -18,6 +18,8 @@ export default function Docs({database}){
             <Modal
                 open={open}
                 setOpen={setOpen}
+                title={title}
+                setTitle={setTitle}
             />
         </div>
     );
