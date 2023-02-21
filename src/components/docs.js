@@ -8,6 +8,7 @@ export default function Docs({database}){
     const [title, setTitle] = useState('');
     const collectionRef = collection(database, 'docsData');
     const isMounted = useRef();
+    const [docsData, setDocsData] = useState([]);
     const addData = () => {
         addDoc(collectionRef, {
             title: title,
@@ -21,7 +22,7 @@ export default function Docs({database}){
     };
     const getData = () => {
         onSnapshot(collectionRef, (data) => {
-            console.log(data.docs.map((doc) => {
+            setDocsData(data.docs.map((doc) => {
                 return {...doc.data(), id: doc.id}
             }))
         })
@@ -42,6 +43,16 @@ export default function Docs({database}){
             >
                 Add New Document
             </button>
+
+            <div>
+                {docsData.map((doc) => {
+                    return (
+                        <div>
+                            <p>{doc.title}</p>
+                        </div>
+                    )
+                })}
+            </div>
 
             <Modal
                 open={open}
