@@ -44,14 +44,16 @@ export default function Docs({database}){
                 Add New Document
             </button>
 
-            <div>
+            <div className="grid-main">
+                <ul className="list-of-docs">
                 {docsData.map((doc) => {
                     return (
-                        <div>
-                            <p>{doc.title}</p>
+                        <div className="grid-child">
+                            <li key={doc.title}>{doc.title}</li>
                         </div>
                     )
                 })}
+                </ul>
             </div>
 
             <Modal
