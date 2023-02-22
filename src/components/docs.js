@@ -45,15 +45,15 @@ export default function Docs({database}){
             </button>
 
             <div className="grid-main">
-                <ul className="list-of-docs">
+                
                 {docsData.map((doc) => {
                     return (
                         <div className="grid-child">
-                            <li key={doc.title}>{doc.title}</li>
+                            <p key={doc.title}>{doc.title}</p>
                         </div>
                     )
                 })}
-                </ul>
+                
             </div>
 
             <Modal
