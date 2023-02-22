@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 
+.add-input {
+  width: 95%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #676767;
+  border-radius: 0px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -31,9 +41,34 @@
   color: #61dafb;
 }
 
+.title-button-container {
+  text-align: center;
+  margin: 30px;
+}
+
 .docs-main{
   text-align: center;
   font-family: 'Roboto', sans-serif;
+}
+
+.grid-child {
+  padding: 20px;
+  background-color: rgb(98, 98, 98);
+  width: 300px;
+  cursor: pointer;
+}
+
+.grid-main {
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  color: whitesmoke;
+  margin-top: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.list-of-docs {
+  list-style-type: circle;
 }
 
 .new-doc-button{
