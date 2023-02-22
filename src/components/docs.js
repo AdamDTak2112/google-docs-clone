@@ -4,6 +4,7 @@ import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 
 export default function Docs({database}){
+    let navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const [title, setTitle] = useState('');
@@ -11,7 +12,7 @@ export default function Docs({database}){
     const isMounted = useRef();
     const [docsData, setDocsData] = useState([]);
     const getID = (id) => {
-        
+        navigate(`/editDocs/${id}`);
     }
     const addData = () => {
         addDoc(collectionRef, {
