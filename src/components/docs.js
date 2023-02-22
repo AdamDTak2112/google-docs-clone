@@ -9,6 +9,9 @@ export default function Docs({database}){
     const collectionRef = collection(database, 'docsData');
     const isMounted = useRef();
     const [docsData, setDocsData] = useState([]);
+    const getID = (id) => {
+        console.log(id);
+    }
     const addData = () => {
         addDoc(collectionRef, {
             title: title,
@@ -48,7 +51,7 @@ export default function Docs({database}){
                 
                 {docsData.map((doc) => {
                     return (
-                        <div className="grid-child">
+                        <div className="grid-child" onClick={() => getID(doc.id)}>
                             <p key={doc.title}>{doc.title}</p>
                         </div>
                     )
