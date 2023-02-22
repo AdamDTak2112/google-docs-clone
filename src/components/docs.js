@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Modal from "./modal";
 import { addDoc, collection, onSnapshot } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 
 export default function Docs({database}){
     const [open, setOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function Docs({database}){
     const isMounted = useRef();
     const [docsData, setDocsData] = useState([]);
     const getID = (id) => {
-        console.log(id);
+        
     }
     const addData = () => {
         addDoc(collectionRef, {
