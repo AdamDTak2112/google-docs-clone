@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { useParams } from 'react-router-dom';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import {collection} from 'firebase/firestore';
+import {updateDoc, 
+        collection,
+        doc
+        } from 'firebase/firestore';
 import { database } from "../firebaseConfig";
 
 export default function EditDocs(){
@@ -16,7 +19,7 @@ export default function EditDocs(){
         const updateDocsData = setTimeout(() => {
             const document = doc(collectionRef, params.id)
             updateDoc(document, {
-                
+
             })
         }, 1000);
         return () => clearTimeout(updateDocsData);
