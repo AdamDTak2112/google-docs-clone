@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams } from 'react-router-dom';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import {collection} from 'firebase/firestore';
+import { database } from "../firebaseConfig";
 
 export default function EditDocs(){
     let params= useParams();
-    console.log(params);
+    const collectionRef = collection(database, 'docsData');
     const [docsDesc, setDocsDesc] = useState('');
     const getQuillData = (value) => {
         setDocsDesc(value);
     }
-    const updateDocsData = () => {
+    useEffect(() => { 
+        const updateDocsData = () => {
+
+        }
+    })
         
-    }
     return (
         <div>
             <h1>EditDocs Page</h1>
