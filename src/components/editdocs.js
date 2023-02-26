@@ -14,7 +14,10 @@ export default function EditDocs(){
     }
     useEffect(() => { 
         const updateDocsData = setTimeout(() => {
-
+            const document = doc(collectionRef, params.id)
+            updateDoc(document, {
+                
+            })
         }, 1000);
         return () => clearTimeout(updateDocsData);
     }, [])
