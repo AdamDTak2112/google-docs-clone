@@ -10,6 +10,9 @@ export default function EditDocs(){
     const getQuillData = (value) => {
         setDocsDesc(value);
     }
+    const updateDocsData = () => {
+        
+    }
     return (
         <div>
             <h1>EditDocs Page</h1>
