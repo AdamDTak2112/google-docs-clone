@@ -19,7 +19,7 @@ export default function EditDocs(){
         const updateDocsData = setTimeout(() => {
             const document = doc(collectionRef, params.id)
             updateDoc(document, {
-
+                docsDesc: docsDesc
             })
         }, 1000);
         return () => clearTimeout(updateDocsData);
