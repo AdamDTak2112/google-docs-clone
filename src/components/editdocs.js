@@ -8,13 +8,16 @@ export default function EditDocs(){
     console.log(params);
     const [docsDesc, setDocsDesc] = useState('');
     const getQuillData = () => {
-        
+
     }
     return (
         <div>
             <h1>EditDocs Page</h1>
 
-            <ReactQuill />
+            <ReactQuill
+                value={docsDesc}
+                onChange={getQuillData} 
+            />
         </div>
     )
 }
