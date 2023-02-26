@@ -13,10 +13,11 @@ export default function EditDocs(){
         setDocsDesc(value);
     }
     useEffect(() => { 
-        const updateDocsData = () => {
+        const updateDocsData = setTimeout(() => {
 
-        }
-    })
+        }, 1000);
+        return () => clearTimeout(updateDocsData);
+    }, [])
         
     return (
         <div>
